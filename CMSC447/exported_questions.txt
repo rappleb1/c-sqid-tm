@@ -1,0 +1,15 @@
+Question 1 - Write a for loop of ints from 10 to 20
+
+Question 2 - What is the definition of recursion?
+
+Question 3 - Return the sum of 2 and 5
+
+
+
+Recommended Restrictions for this Assignment:
+- min()
+- break, continue
+- quit()
+- sum()
+- max()
+- .index()

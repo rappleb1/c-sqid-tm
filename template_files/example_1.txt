@@ -1,0 +1,19 @@
+What is the definition of {field}?
+
+Write code to check if {num} is the same as {num}
+
+In an array {num} to {num} where {field} is stored write code that will find {var_3}
+
+Write code to find which {field} is {field} between {num} and {num}
+
+Write a for loop of ints from {num} to {num}
+
+Write a {field} to loop through an array of {field} named A1
+
+Return the {field} of {num} and {num}
+
+Write a function that will return a {field} to the user
+
+In an array A = ({field}, {field}, {field}, {field}). What would A[{num}] equal?
+
+Is {num} {field} {num} true?

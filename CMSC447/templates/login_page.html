@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Access Denied</title>
+        <!--Setup Google signin here-->
+    <meta name="google-signin-client_id" content="">
+   <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body onload="loadAndExitGoogle()">
+    <h5>Access Denied - Please contact your server administrator.</h5>
+<a href="../../templates/landing_page.html" onclick="loadAndExitGoogle()">Go Back</a>
+</body>
+<script>
+    function loadAndExitGoogle() {
+        if (!gapi.auth2) {
+            gapi.load('auth2', function () {
+                console.log('zero')
+                gapi.auth2.init().then(exitGoogle);
+            });
+        }
+    };
+    function exitGoogle(){
+        if (gapi.auth2) {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+    }
+
+</script>
+</html>

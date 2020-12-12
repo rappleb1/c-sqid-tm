@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link href="../static/main_page.css" rel="stylesheet" type="text/css">
+    <!--Setup Google signin here-->
+    <meta name="google-signin-client_id" content="">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <style>
+        #title {
+            text-align: center;
+            font-family: Arial;
+            color: gold;
+        }
+        html{
+    font-family: Arial;
+}
+
+.header {
+  padding: 10px;
+  text-align: left;
+  background: black;
+  color: gold;
+}
+
+    </style>
+
+</head>
+<body onload="getGoogle()">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="../../templates/retrieve_page.html">View Templates</a>
+        <a href="../../templates/store_page.html">Add Templates</a>
+        <a href="../../templates/modify_page.html">Manage Templates</a>
+        <a href="#" onclick="signOut()">Log Out</a>
+    </div>
+<div class="header">
+    <h2 onclick="openNav()">&#9776</h2>
+</div>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div>
+  <h1 id="title">You have logged in to C-SQID-TM! Please navigate using the side navigation Panel.</h1>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
+
+function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      window.location.href = '../../templates/landing_page.html';
+    });
+}
+
+function getGoogle(){
+    if(!gapi.auth2){
+        gapi.load('auth2', function() {
+            gapi.auth2.init();
+        });
+    }
+}
+</script>
+</body>
+</html>

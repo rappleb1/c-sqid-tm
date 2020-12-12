@@ -1,0 +1,23 @@
+Write code to see if {field} and {field} are equal
+
+Write code to see how long {field} is
+
+Write code to find the absolute value of {num}.
+
+Write a function to do a {field} operation.
+
+Write a function to do a {field} operation.
+
+Give an example of a variable {field}.
+
+Write an if statement in {field}. 
+
+Convert the array A = ({field}, {field}, {field}, {field}, {field}) into a single string
+
+Write code that will put {num} to the power of {num}
+
+Create a function that would remove a char from the {field} of a string
+
+Create a function that would remove the value located at {field} from any valid array
+
+Create a function that would {field} {num} to an entire array of size {field}
